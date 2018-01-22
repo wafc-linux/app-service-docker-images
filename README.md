@@ -1,3 +1,4 @@
+
 # Web App for Containers quick start docker images
 
 This repo contains all currently quick start docker images contributed by the community.	
@@ -7,6 +8,10 @@ This repo contains all currently quick start docker images contributed by the co
 + [**Git tutorial**](/1-CONTRIBUTION-GUIDE/git-tutorial.md#git-tutorial). Step by step to get you started with Git.
 + [**Useful Tools**](/1-CONTRIBUTION-GUIDE/useful-tools.md#useful-tools). Useful resources and tools for Azure development.
 
+## Submission workflow 
+The submission process 6 step process as shown below. The time taken to approve or reject a PR can vary as this is community driven. 
+
+![Submission workflow for docker images](images/submission-flow.PNG?raw=true)
 
 ## Deploying Samples
 You can deploy these samples directly through the Azure Portal
