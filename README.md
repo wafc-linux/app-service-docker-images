@@ -1,57 +1,43 @@
-# Project Name
+# Web App for Containers quick start docker images
 
-(short, 1-3 sentenced, description of the project)
+This repo contains all currently quick start docker images contributed by the community.	
 
-## Features
-
-This project framework provides the following features:
-
-* Feature 1
-* Feature 2
-* ...
-
-## Getting Started
-
-### Prerequisites
-
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
++ [**Contribution guide**](/1-CONTRIBUTION-GUIDE/README.md#contribution-guide). Describes the minimal guidelines for contributing.
++ [**Best practices**](/1-CONTRIBUTION-GUIDE/best-practices.md#best-practices). Best practices for improving the quality of your template design.
++ [**Git tutorial**](/1-CONTRIBUTION-GUIDE/git-tutorial.md#git-tutorial). Step by step to get you started with Git.
++ [**Useful Tools**](/1-CONTRIBUTION-GUIDE/useful-tools.md#useful-tools). Useful resources and tools for Azure development.
 
 
-## Demo
+## Deploying Samples
+You can deploy these samples directly through the Azure Portal
 
-A demo app is included to show how to use the project.
+1. Go to [Azure portal](https://portal.azure.com)
+2. Search for [Web app for Containers](https://portal.azure.com#create/microsoft.appsvclinux)
+3. Enter web app name , susbcription , resource group 
+4. Select configure container and enter the docker hub image name with the tag name. you can find all the docker hub images [here](https://hub.docker.com/r/appsvcorg) 
+5. Review the readme.md for the imae you are using to make sure any additional configuration such as app settings need to be updated. Make the necessary changes 
+6. Now browse the application 
 
-To run the demo, follow these steps:
+*Note: The first request can take longer to complete since the docker image needs to be pulled and run on the container for the first request. This can occur when you scale up your application or the instance gets recycled.*
 
-(Add steps to start up the demo)
 
-1.
-2.
-3.
+## Contribution guide
 
-## Resources
+Please follow the guidelines to be compliant . If any docker image is out of compliance , it will be **blacklisted** from this repo and eventually removed. 
 
-(Any additional resources or related projects)
+## Files, folders and naming conventions
+1.Create a new folder for a new docker image and include a version folder . Such as 
+```
++my-image
+	         \  0.1 
+		       \Dockerfile and other files 
+		
+```
+ 
+ *Note:  If you are updating an existing image  , create a new version folder within your image folder.*
+  
+2.Include a README.md within version folder to describe :
+		a. Any changes with deployment of use of the image 
+		b. Include comments if the image is not backward compatible and how user can manually upgrade to new version 
 
-- Link to supporting information
-- Link to similar sample
-- ...
+
