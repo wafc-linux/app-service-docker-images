@@ -1,12 +1,12 @@
-
+ 
 # Web App for Containers quick start docker images
 
 This repo contains all currently quick start docker images contributed by the community.	
 
-+ [**Contribution guide**](/1-CONTRIBUTION-GUIDE/README.md#contribution-guide). Describes the minimal guidelines for contributing.
-+ [**Best practices**](/1-CONTRIBUTION-GUIDE/best-practices.md#best-practices). Best practices for improving the quality of your template design.
-+ [**Git tutorial**](/1-CONTRIBUTION-GUIDE/git-tutorial.md#git-tutorial). Step by step to get you started with Git.
-+ [**Useful Tools**](/1-CONTRIBUTION-GUIDE/useful-tools.md#useful-tools). Useful resources and tools for Azure development.
++ [**Contribution guide**](/contribution-guide/README.md). Describes the minimal guidelines for contributing.
++ [**Best practices**](/contribution-guide/best-practices.md). Best practices for improving the quality of your docker image
++ [**Git tutorial**](/contribution-guide/git-tutorial.md). Step by step to get you started with Git.
++ [**Useful Tools**](/contribution-guide/useful-tools.md). Useful resources and tools for docker image development
 
 ## Submission workflow 
 The submission process 6 step process as shown below. The time taken to approve or reject a PR can vary as this is community driven. 
@@ -31,7 +31,7 @@ You can deploy these samples directly through the Azure Portal
 Please follow the guidelines to be compliant . If any docker image is out of compliance , it will be **blacklisted** from this repo and eventually removed. 
 
 ## Files, folders and naming conventions
-1.Create a new folder for a new docker image and include a version folder . Such as 
+1. Create a new folder for a new docker image and include a version folder . Such as 
 ```
 +my-image
 	         \  0.1 
