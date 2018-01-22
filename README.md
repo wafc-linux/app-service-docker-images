@@ -2,7 +2,7 @@
 
 This repo contains all currently quick start docker images contributed by the community.	
 
-+ [**Contribution guide**](README.md#ContributionGuide). Describes the minimal guidelines for contributing.
++ [**Contribution guide**](#ContributionGuide). Describes the minimal guidelines for contributing.
 + [**Best practices**](/contribution-guide/best-practices.md). Best practices for improving the quality of your docker image
 + [**Git tutorial**](/contribution-guide/git-tutorial.md). Step by step to get you started with Git.
 + [**Useful Tools**](/contribution-guide/useful-tools.md). Useful resources and tools for docker image development
