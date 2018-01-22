@@ -1,9 +1,8 @@
- 
-# Web App for Containers quick start docker images
+ # Web App for Containers quick start docker images
 
 This repo contains all currently quick start docker images contributed by the community.	
 
-+ [**Contribution guide**](/contribution-guide/README.md). Describes the minimal guidelines for contributing.
++ [**Contribution guide**](/README.md#ContributionGuide). Describes the minimal guidelines for contributing.
 + [**Best practices**](/contribution-guide/best-practices.md). Best practices for improving the quality of your docker image
 + [**Git tutorial**](/contribution-guide/git-tutorial.md). Step by step to get you started with Git.
 + [**Useful Tools**](/contribution-guide/useful-tools.md). Useful resources and tools for docker image development
@@ -26,7 +25,7 @@ You can deploy these samples directly through the Azure Portal
 *Note: The first request can take longer to complete since the docker image needs to be pulled and run on the container for the first request. This can occur when you scale up your application or the instance gets recycled.*
 
 
-## Contribution guide
+## [Contribution guide](#ContributionGuide)
 
 Please follow the guidelines to be compliant . If any docker image is out of compliance , it will be **blacklisted** from this repo and eventually removed. 
 
