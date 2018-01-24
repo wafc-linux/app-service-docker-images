@@ -199,8 +199,8 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     echo $TRAVIS_COMMIT
     echo $TRAVIS_COMMIT >> result.log
     SignOff="#sign-off"        
-    sign0ff=$(echo "${TRAVIS_COMMIT_MESSAGE}" | grep "${SignOff}")
-    if [ -n "${signoff}" ]; then
+    signOff=$(echo "${TRAVIS_COMMIT_MESSAGE}" | grep "${SignOff}")
+    if [ -n ${signOff} ]; then
         echo "========================================"
         echo "========================================" >> result.log
         echo "INFORMATION - COMMIT MESSAGE contains #sign-off, using PROD......"
