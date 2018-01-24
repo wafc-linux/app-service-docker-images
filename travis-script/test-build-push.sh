@@ -17,7 +17,8 @@ build_image(){
         echo "FAILED - Build fail!!!"
         exit 1
     else
-        echo "${testBuildImage}"        
+        echo "${testBuildImage}"
+        echo "${testBuildImage}" >> result.log        
         echo "PASSED - Build Successfully!!!."
         echo "PASSED - Build Successfully!!!." >> result.log
     fi
@@ -60,20 +61,16 @@ echo "Build Number: ${TRAVIS_BUILD_NUMBER}"
 echo "TRAVIS_EVENT_TYPE: ${TRAVIS_EVENT_TYPE}"
 echo "TRAVIS_COMMIT_MESSAGE: ${TRAVIS_COMMIT_MESSAGE}"
 
-pushed="false"
 # "#sign-off exist!"
-if [ "$DOCKER_USERNAME" == "$PROD_DOCKER_USERNAME" ]; then
-    echo "INFORMATION - This time, push to production environment......"
-    TAG=${DOCKER_IMAGE_VERSION}
-    echo "INFORMATION - Set TAG as ""${TAG}"" and push......" 
-    setTag_push_rm
-    pushed="true"
+if [ $DOCKER_USERNAME == $PROD_DOCKER_USERNAME ]; then
+    echo "INFORMATION - This time, push to production dockhub......"    
+    TAG=${DOCKER_IMAGE_VERSION}       
+else
+    echo "INFORMATION - This time, push to Testing dockhub......"    
+    TAG=${DOCKER_IMAGE_VERSION}"-"${TRAVIS_BUILD_NUMBER}        
 fi
-if [ "${pushed}" == "false" ]; then
-        TAG=${DOCKER_IMAGE_VERSION}"-"${TRAVIS_BUILD_NUMBER}
-        echo "INFORMATION: Set TAG as ""${TAG}"" and push......"
-        setTag_push_rm
-fi
+echo "INFORMATION - Set TAG as ""${TAG}"" and push......" 
+setTag_push_rm
 
 echo "========================================"
 echo "Stage4 - PULL and Verify"
