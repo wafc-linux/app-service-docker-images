@@ -12,7 +12,8 @@ notifications:
   email:
     recipients:
       - v-jizh11@microsoft.com
-      - leonzh@wicresoft.com    
+      - appgal@microsoft.com    
+      - leonzh@wicresoft.com
     on_success: always
     on_failure: always
     
