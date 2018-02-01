@@ -208,6 +208,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
         DOCKER_USERNAME=$PROD_DOCKER_USERNAME
         DOCKER_ACCOUNT=$PROD_DOCKER_ACCOUNT
         DOCKER_PASSWORD=$PROD_DOCKER_PASSWORD
+	ACR_REPO=""
     fi    
     commit_sha=$TRAVIS_COMMIT    
     get_files_from_commit
