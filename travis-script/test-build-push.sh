@@ -53,7 +53,7 @@ echo "INFORMATION - Start to Build......"
 echo "INFORMATION - Start to Build......"${DOCKER_IMAGE_NAME}":"$DOCKER_IMAGE_VERSION >> result.log
 echo "========================================"
 echo "========================================" >> result.log
-
+build_image
 echo "Stage3 - Set Tag and Push"
 echo "Stage3 - Set Tag and Push" >> result.log
 echo "Build Number: ${TRAVIS_BUILD_NUMBER}"
@@ -68,7 +68,6 @@ else
     echo "INFORMATION - This time, push to Testing docker repo ....."    
     TAG=${DOCKER_IMAGE_VERSION}"-"${TRAVIS_BUILD_NUMBER}        
 fi
-build_image
 echo "INFORMATION - Set TAG as ""${TAG}"" and push......" 
 setTag_push_rm
 
