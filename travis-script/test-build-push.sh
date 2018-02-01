@@ -51,7 +51,6 @@ setTag_push_rm(){
 echo "Stage2 - Build Image"
 echo "INFORMATION - Start to Build......"
 echo "INFORMATION - Start to Build......"${DOCKER_IMAGE_NAME}":"$DOCKER_IMAGE_VERSION >> result.log
-build_image
 echo "========================================"
 echo "========================================" >> result.log
 
@@ -63,13 +62,13 @@ echo "TRAVIS_COMMIT_MESSAGE: ${TRAVIS_COMMIT_MESSAGE}"
 
 # "#sign-off exist!"
 if [ $DOCKER_USERNAME == $PROD_DOCKER_USERNAME ]; then
-    $ACR_REPO = ""
     echo "INFORMATION - This time, push to production docker repo......"    
     TAG=${DOCKER_IMAGE_VERSION}       
 else
     echo "INFORMATION - This time, push to Testing docker repo ....."    
     TAG=${DOCKER_IMAGE_VERSION}"-"${TRAVIS_BUILD_NUMBER}        
 fi
+build_image
 echo "INFORMATION - Set TAG as ""${TAG}"" and push......" 
 setTag_push_rm
 
