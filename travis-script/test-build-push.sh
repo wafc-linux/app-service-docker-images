@@ -63,10 +63,11 @@ echo "TRAVIS_COMMIT_MESSAGE: ${TRAVIS_COMMIT_MESSAGE}"
 
 # "#sign-off exist!"
 if [ $DOCKER_USERNAME == $PROD_DOCKER_USERNAME ]; then
-    echo "INFORMATION - This time, push to production dockhub......"    
+    $ACR_REPO = ""
+    echo "INFORMATION - This time, push to production docker repo......"    
     TAG=${DOCKER_IMAGE_VERSION}       
 else
-    echo "INFORMATION - This time, push to Testing dockhub......"    
+    echo "INFORMATION - This time, push to Testing docker repo ....."    
     TAG=${DOCKER_IMAGE_VERSION}"-"${TRAVIS_BUILD_NUMBER}        
 fi
 echo "INFORMATION - Set TAG as ""${TAG}"" and push......" 
